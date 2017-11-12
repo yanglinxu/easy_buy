@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="ie=edge" http-equiv="X-UA-Compatible">
+        <title>乐淘云购后台管理系统</title>
+        <!-- 引入bootstrap库 -->
+        <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- 引入NProgress -->
+        <link href="./lib/nprogress/nprogress.css" rel="stylesheet">
+        <!-- 引入当前页面的css -->
+        <link href="./css/admin.css" rel="stylesheet">
+    </head>
+    <body>
+        <aside class="lt_aside">
+            <a class="brand" href="#">
+                ITCAST
+            </a>
+            <div class="user">
+                <img src="images/default.png">
+                    <span>
+                        炒鸡管理员
+                    </span>
+                </img>
+            </div>
+            <div class="list">
+                <ul>
+                    <li>
+                        <a href="./userManager.html">
+                            <i class="glyphicon glyphicon-user">
+                            </i>
+                            用户管理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-list">
+                            </i>
+                            分类管理
+                        </a>
+                        <div class="child">
+                            <a href="javascript:;">
+                                一级分类
+                            </a>
+                            <a href="./categorySecond.html">
+                                二级分类
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-tags">
+                            </i>
+                            商品管理
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <section class="content">
+            <nav class="top_nav">
+                <a class="nav_l" href="#">
+                    <span class="glyphicon glyphicon-align-justify">
+                    </span>
+                </a>
+                <a class="nav_r" href="#">
+                    <span class="glyphicon glyphicon-log-out" data-toggle="modal" data-target="#logout_Modal">
+                    </span>
+                </a>
+            </nav>
+            <div class="datas">
+                <ol class="breadcrumb">
+                    <li class="active">
+                        管理系统
+                    </li>
+                    <li>
+                        用户管理
+                    </li>
+                </ol>
+				
+				<button data-target='#first_modal' data-toggle='modal'  class="btn btn-default" style="margin-bottom: 20px;">添加分类</button>
+
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr >
+                          <th class="col-md-3" style="text-align: center !important">序号</th>
+                          <th class="col-md-9"  style="text-align: center !important">分类名称</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+                <div class="page" style="text-align:right">
+            <ul class="pagination"></ul>
+          </div>
+            </div>
+        </section>
+
+        <!-- 退出登录模态框 -->
+        <div aria-labelledby="myModalLabel" class="modal fade" id="logout_Modal">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                            <span aria-hidden="true">
+                                ×
+                            </span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            温馨提示
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        您确定要退出后台管理系统吗？
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" data-dismiss="modal" type="button">
+                            取消
+                        </button>
+                        <button class="btn btn-primary" type="button">
+                            确定
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 按钮的模态框 -->
+         <div class="modal fade" id="first_modal" tabindex="-1">
+         <div class="modal-dialog modal-sm">
+      	 <div class="modal-content">
+         <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">添加分类</h4>
+        </div>
+        <div class="modal-body">
+          
+            <form id="first_form">
+            	<div class="col-sm-12"></div>
+            	<input type="text" name="categoryName" class="form-control" placeholder="输入一级分类">
+            </form>
+          
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="button" id="save" class="btn btn-primary">确定</button>
+        </div>
+      </div>
+            </div>
+         </div>
+
+        <!-- 引擎模板 -->
+        <script type="text/template" id="fisrt_template">
+           <%for(var i = 0; i<rows.length;i++){%>
+  		 	<tr class="text-center">
+  		 	    <td class="col-md-3"><%=rows[i].id%></td>
+  		 	    <td class="col-md-9"><%=rows[i].categoryName%></td>
+  		 	</tr>
+  		   <%}%>
+        </script>
+
+
+
+
+        
+        <!-- 引入jquery -->
+        <script src="./lib/jquery/jquery.min.js">
+        </script>
+        <!-- 引入bootstrap的插件 -->
+        <script src="./lib/bootstrap/js/bootstrap.min.js">
+        </script>
+        <!-- 引入模板引擎插件 -->
+        <script src="./lib/artTemplate/template-native.js"></script>
+        <!-- 引入进度条插件 -->
+        <script src="./lib/nprogress/nprogress.js">
+        </script>
+        <!-- 引入分页插件 -->
+        <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+        <!-- 引入admin文件 -->
+        <script src="./js/admin.js">
+        </script>
+        <!-- 引入userManager文件 -->
+        <script src="./js/categoryFirst.js">
+        </script>
+
+    </body>
+</html>

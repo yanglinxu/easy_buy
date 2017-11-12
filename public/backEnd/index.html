@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <meta content="width=device-width, initial-scale=1.0" name="viewport">
+                <meta content="ie=edge" http-equiv="X-UA-Compatible">
+                    <title>
+                        乐淘云购后台管理系统
+                    </title>
+                    <!-- 引入bootstrap库 -->
+                    <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+                        <!-- 引入NProgress -->
+                        <link href="./lib/nprogress/nprogress.css" rel="stylesheet">
+                            <!-- 引入表单验证插件的css -->
+                            <link href="./lib/bootstrap-validator/css/bootstrapValidator.min.css" rel="stylesheet">
+                                <!-- 引入当前页面的css -->
+                                <link href="./css/admin.css" rel="stylesheet">
+                                </link>
+                            </link>
+                        </link>
+                    </link>
+                </meta>
+            </meta>
+        </meta>
+    </head>
+    <body>
+        <aside class="lt_aside">
+            <a class="brand" href="#">
+                ITCAST
+            </a>
+            <div class="user">
+                <img src="images/default.png">
+                    <span>
+                        炒鸡管理员
+                    </span>
+                </img>
+            </div>
+            <div class="list">
+                <ul>
+                    <li>
+                        <a href="./userManager.html">
+                            <i class="glyphicon glyphicon-user">
+                            </i>
+                            用户管理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-list">
+                            </i>
+                            分类管理
+                        </a>
+                        <div class="child">
+                            <a href="./categoryFirst.html">
+                                一级分类
+                            </a>
+                            <a href="javascript:;">
+                                二级分类
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-tags">
+                            </i>
+                            商品管理
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <section class="content">
+            <nav class="top_nav">
+                <a class="nav_l" href="#">
+                    <span class="glyphicon glyphicon-align-justify">
+                    </span>
+                </a>
+                <a class="nav_r" href="#">
+                    <span class="glyphicon glyphicon-log-out" data-toggle="modal" data-target="#logout_Modal">
+                    </span>
+                </a>
+            </nav>
+            <div class="datas">
+                <ol class="breadcrumb">
+                    <li class="active">
+                        管理系统
+                    </li>
+                    <li>
+                        首页
+                    </li>
+                </ol>
+                <div class="pic_canvas">
+                    <div class="picTable">
+                    </div>
+                    <div class="picTable">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 模态框 -->
+        <div aria-labelledby="myModalLabel" class="modal fade" id="logout_Modal">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                            <span aria-hidden="true">
+                                ×
+                            </span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            温馨提示
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        您确定要退出后台管理系统吗？
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" data-dismiss="modal" type="button">
+                            取消
+                        </button>
+                        <button class="btn btn-primary" type="button">
+                            确定
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        
+        <!-- 引入jquery -->
+        <script src="./lib/jquery/jquery.min.js">
+        </script>
+        <!-- 引入bootstrap的插件 -->
+        <script src="./lib/bootstrap/js/bootstrap.min.js">
+        </script>
+        <!-- 引入echarts库 -->
+        <script src="./lib/echarts/echarts.min.js">
+        </script>
+        <!-- 引入表单验证的插件 -->
+        <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js">
+        </script>
+        <!-- 引入进度条插件 -->
+        <script src="./lib/nprogress/nprogress.js">
+        </script>
+        <!-- 引入admin文件 -->
+        <script src="./js/admin.js">
+        </script>
+        <!-- 引入index.js -->
+        <script src="./js/index.js">
+        </script>
+    </body>
+</html>

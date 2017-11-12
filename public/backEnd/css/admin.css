@@ -1,0 +1,128 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+//登录页的样式
+
+
+a {
+	text-decoration: none;
+}
+
+.lt_aside {
+	width: 180px;
+	background: #222d32;
+	height: 100%;
+	position: absolute;
+}
+
+.lt_aside .brand {
+	display: block;
+	width: 100%;
+	height: 50px;
+	background: #367fa9;
+	color: white;
+	text-align: center;
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.lt_aside .user {
+	width: 100%;
+	height: 110px;
+	line-height: 110px;
+	text-align: center;
+}
+
+.lt_aside .user img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+
+.lt_aside .user span {
+	color: white;
+	font-size: 12px;
+}
+
+
+.lt_aside .list ul {
+	list-style: none;
+	width: 100%;
+	box-sizing: border-box;
+	padding-left: 30px;
+}
+
+.lt_aside .list li {
+	
+	line-height: 40px;
+}
+
+.lt_aside .list li a {
+	// display: block;
+	// height: 40px;
+	color:#aaa;
+}
+
+.lt_aside .list li i {
+	padding-right: 5px;
+}
+
+.lt_aside .list li .child a {
+	display: block;
+	line-height: 30px;
+	padding-left: 20px;
+}
+
+
+.content {
+	height: 100%;
+	margin-left: 180px;
+}
+.content.none {
+	margin-left: 0;
+}
+
+.content .top_nav {
+	height: 50px;
+	background-color: #3c8dbc;
+}
+
+.content .top_nav a {
+	display: inline-block;
+	font-size: 16px;
+    color: #fff;
+    margin-top: 14px;
+    padding-left: 10px;
+}
+
+.content .top_nav .nav_r {
+	float: right;
+	padding-right: 10px;
+}
+
+.content .datas {
+	padding:0 15px;
+	margin-top: 20px;
+}
+
+.content .datas ol li {
+	cursor: pointer;
+}
+
+
+.content .pic_canvas {
+	margin-top: 20px; 
+}
+
+.content .pic_canvas .picTable {
+	float: left;
+    width: 45%;
+    height: 400px;
+}
+
+
