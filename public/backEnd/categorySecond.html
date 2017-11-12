@@ -79,7 +79,7 @@
                     </li>
                 </ol>
 				
-				<button data-target='#first_modal' data-toggle='modal'  class="btn btn-default" style="margin-bottom: 20px;">添加分类</button>
+				<button data-target='#second_modal' data-toggle='modal'  class="btn btn-default" style="margin-bottom: 20px;">添加分类</button>
 
                 <table class="table table-bordered table-hover">
                     <thead>
@@ -130,7 +130,7 @@
         </div>
 
         <!-- 按钮的模态框 -->
-         <div class="modal fade" id="first_modal" tabindex="-1">
+         <div class="modal fade" id="second_modal" tabindex="-1">
          <div class="modal-dialog modal-sm">
       	 <div class="modal-content">
          <div class="modal-header">
@@ -140,13 +140,17 @@
           <h4 class="modal-title" id="myModalLabel">添加分类</h4>
         </div>
         <div class="modal-body">
-          
-            <form id="first_form">
-            	<div class="col-sm-12"></div>
-            	<input type="text" name="categoryName" class="form-control" placeholder="输入一级分类">
-            </form>
-          
-
+           <div class="dropdown">
+               <span>一级分类：</span>
+               <button class="btn btn-default" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   游泳馆
+                   <span class="caret"></span>
+               </button>
+               <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    <li>游泳馆</li>
+                    <li>生活馆</li>
+               </ul>
+           </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
