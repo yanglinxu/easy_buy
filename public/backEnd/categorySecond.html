@@ -11,6 +11,20 @@
         <link href="./lib/nprogress/nprogress.css" rel="stylesheet">
         <!-- 引入当前页面的css -->
         <link href="./css/admin.css" rel="stylesheet">
+
+        <style type="text/css">
+            .file_up {
+                position: relative;
+            }
+            .file_up input {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                width: 82px;
+                height: 34px;
+            }
+        </style>
     </head>
     <body>
         <aside class="lt_aside">
@@ -143,18 +157,34 @@
            <div class="dropdown">
                <span>一级分类：</span>
                <button class="btn btn-default" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   游泳馆
+                   <span id="btn_content">游泳馆</span>
                    <span class="caret"></span>
                </button>
-               <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li>游泳馆</li>
-                    <li>生活馆</li>
-               </ul>
+               <ul class="dropdown-menu" aria-labelledby="dLabel" id="drop_ul"></ul>
            </div>
+
+           <form id="secondform">
+                <input type="hidden" name="categoryId" id="categoryId">
+               <div class="form-group" style="margin-top: 20px">
+                    <label for="brandName"></label>
+                   <input type="text" name="brandName" placeholder="请输入二级分类" class="form-control">
+               </div>
+
+               <div class="form-group file_up">
+                    <input type="hidden" name="brandLogo" id="brandLogo">
+                   <!-- 将输入框隐藏并放在a标签的位置 -->
+                   <a href="javascript:;" class="btn btn-default">上传图片</a>
+                   <input type="file" id="secondupload" name="pic1">
+               </div>
+
+               <div class="form-group">
+                   <img src="images/none.png" width="100" height="100" id="previewimg">
+               </div>
+           </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-          <button type="button" id="save" class="btn btn-primary">确定</button>
+          <button type="submit" id="save" class="btn btn-primary" form="secondform">确定</button>
         </div>
       </div>
             </div>
@@ -187,8 +217,14 @@
         <!-- 引入进度条插件 -->
         <script src="./lib/nprogress/nprogress.js">
         </script>
+         <!-- 引入表单验证的插件 -->
+        <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
         <!-- 引入分页插件 -->
         <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+        <!-- 引入上传插件 -->
+        <script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+        <script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
+
         <!-- 引入admin文件 -->
         <script src="./js/admin.js">
         </script>
