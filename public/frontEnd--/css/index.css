@@ -1,0 +1,132 @@
+
+.mui-slider {
+  margin-top: 44px;
+}
+
+.mui-slider-indicator {
+  z-index: 10;
+}
+
+/* 九宫格 */
+.grid-nine {
+  width: 100%;
+  margin: 10px 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.grid-nine ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 0;
+}
+/* 移动端能用display：inline-block 绝不用float */
+.grid-nine li {
+  width: 33.3333333%;
+  display: inline-block;
+
+}
+
+.grid-nine a {
+  display: block;
+  width: 100%;
+}
+
+.grid-nine img {
+  width: 100%;
+  vertical-align: middle;
+  height: auto;
+}
+
+/* 匡威广告 */
+.kw-advert {
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.kw-advert ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+}
+
+.kw-advert a {
+  width: 100%;
+  display: block;
+}
+
+.kw-advert img {
+  width: 100%;
+  vertical-align: middle;
+  height: auto;
+}
+
+.kw-advert li:first-child {
+  flex: 1;
+}
+
+.kw-advert li:first-child a {
+  float: left;
+  width: 50%;
+}
+
+.kw-advert li:last-child {
+  width: 32.9%;
+}
+
+
+.brand-area {
+  width: 100%;
+  padding: 0 10px;
+  margin-top: 5px;
+  font-size: 0;
+}
+
+.brand-area a {
+  display: inline-block;
+  width: 25%;
+}
+
+.brand-area img {
+  width: 100%;
+  vertical-align: middle;
+  height: auto;  
+}
+
+.brand-area a:first-child,.brand-area a:last-child {
+  width: 100%;
+}
+
+
+/* 运动生活专区 */
+.sports-area {
+  width: 100%;
+  margin-top: 10px;
+  padding: 0 10px;
+  font-size: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* 女士专区 */
+.women-area {
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.women-area-title {
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+.women-area-title img {
+  width: 100%;
+  vertical-align: middle;
+}
