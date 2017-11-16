@@ -16,7 +16,7 @@ $(function () {
         range:'100px', //可选 默认100px,控件可下拉拖拽的范围
         offset:'0px', //可选 默认0px,下拉刷新控件的起始位置
         auto: true,//可选,默认false.首次加载自动上拉刷新一次
-        callback:function(){
+        callback: function(){
           // console.log(1);
           getSearchListData();
     

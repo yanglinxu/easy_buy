@@ -35,6 +35,13 @@ $(function(){
 		showHistory()
 	})
 
+
+	//事件4--当点击单个历史记录，进行跳转
+	$('.search-history-list').on('singleTap', 'span', function(){
+		var value = $(this).html()
+		location.href = './searchList.html?proName=' + value
+	})
+
 })
 
 

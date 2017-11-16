@@ -102,7 +102,9 @@ html,body {
   line-height: 30px;
 }
 
-
+.search-result .search-result-order a.active {
+  color: red;
+}
 
 
 .search-result-list {
